@@ -1,0 +1,35 @@
+/* Local layout only. Reel geometry, animation and player transitions are inherited. */
+.music-machine[data-project-type="channel_master"] .customer-identity{margin-top:12px;min-height:58px;height:auto;padding:10px 16px}
+.music-machine[data-project-type="channel_master"] .customer-identity-copy{min-height:0}
+.music-machine[data-project-type="channel_master"] .customer-identity-copy strong{font-size:clamp(21px,5.3vw,34px)}
+.customer-identity-subtitle{display:none!important}
+.machine-controls[hidden]{display:none!important}
+.glass-controls{--tile-height:104px;position:relative;width:100%;padding:6px 4px 0;margin:0;min-width:0}
+.glass-controls .carousel-dock{position:relative;top:auto;left:auto;width:100%;grid-template-columns:26px minmax(0,1fr) 26px}
+.glass-controls .carousel-arrow{background:none;border:0;display:grid;place-items:center;padding:0;min-height:54px}
+.glass-controls .carousel-arrow[hidden]{display:none}
+.glass-controls .carousel-dock:not(.is-overflowing){grid-template-columns:minmax(0,1fr)}
+.glass-controls .carousel-dock:not(.is-overflowing) .left-controls{grid-column:1}
+.glass-controls .left-controls{height:122px;touch-action:pan-x pan-y}
+.glass-controls .left-controls :is(button,a){--cta-height:112px;--cta-width:107px;font-size:14px;cursor:pointer;overflow:hidden}
+.glass-controls .left-controls :is(button,a)>b{font:inherit;min-height:2.12em;display:grid;align-items:center;max-width:100%;white-space:normal}
+.glyph svg{width:100%;height:100%;display:block;stroke-width:1.4}
+.glass-controls .left-controls :is(button,a):disabled{opacity:.55;cursor:default}
+.music-machine .content-card{display:none!important}
+.music-machine[data-project-type="channel_master"] .content-copy h2{font-size:18px;line-height:1.15}
+.music-machine[data-project-type="channel_master"] .content-meta{font-size:12px;line-height:1.4}
+.music-machine[data-project-type="channel_master"] .content-description{font-size:14px;line-height:1.45}
+@media(min-width:600px){.glass-controls{--tile-height:116px}.glass-controls .left-controls{height:132px}.glass-controls .left-controls :is(button,a){--cta-height:124px;--cta-width:118px}}
+@media(max-width:599px){
+ .glass-controls{--tile-height:72.8px}
+ .glass-controls .left-controls{height:88.4px}
+ .glass-controls .left-controls :is(button,a){--cta-height:78.4px;--cta-width:74.9px;padding:6px 3px;gap:2px;font-size:14px}
+ .glass-controls .left-controls .glyph{width:24px;height:24px}
+ .glass-controls .left-controls :is(button,a)>b{min-height:28px;line-height:1}
+}
+/* Approved Black Damask: backgrounds only; no geometry or control changes. */
+html,body,.music-machine{background-color:#0d0e0f;background-image:url('black-damask.png');background-size:480px 480px;background-repeat:repeat}
+.music-machine[data-project-type="channel_master"] .customer-backdrop,
+.music-machine[data-project-type="channel_master"] .experience-frame{background:#0d0e0f url('black-damask.png') center top/480px 480px repeat}
+.music-machine[data-project-type="channel_master"] .customer-backdrop::after,
+.music-machine[data-project-type="channel_master"] .experience-frame::before{background:none}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "d31f7743-c3bd-59d3-af34-5d65609a1045",
+    "label": "YOUTUBE",
+    "icon": "youtube",
+    "url": "https://www.youtube.com/@Polly_Cox"
+  },
+  {
+    "id": "d77063e7-7cf1-5c5a-8eb3-3cfd152905d3",
+    "label": "RE-SPIN",
+    "icon": "replay",
+    "action": "spin-again"
+  },
+  {
+    "id": "6467cbf8-079e-427b-aac4-1f8d6012c9ba",
+    "label": "SPOTIFY",
+    "icon": "spotify",
+    "url": "https://open.spotify.com/album/3GS8Xt04KqvEAWxDwjfCcw"
+  },
+  {
+    "id": "b93630dc-b1bb-4db9-94ae-357222207703",
+    "label": "INSTAGRAM",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/pollycoxmusic"
+  },
+  {
+    "id": "51b0a2a1-4c02-4365-8134-a3c6c0542512",
+    "label": "FACEBOOK",
+    "icon": "facebook",
+    "url": "https://www.facebook.com/profile.php?id=61594515056001"
+  },
+  {
+    "id": "0a8dafe1-d773-46b5-84af-5785f97cb7db",
+    "label": "BANDCAMP",
+    "icon": "bandcamp",
+    "url": "https://pollycox.bandcamp.com/album/magic-stuff"
+  },
+  {
+    "id": "5a7fbd2a-d427-4316-8e27-55774a0ee4de",
+    "label": "LISTEN NOW",
+    "icon": "headphones",
+    "url": "https://open.spotify.com/artist/6eWeLHAkSpSMRy8SDv0uni"
+  },
+  {
+    "id": "09a46684-df08-4862-b0be-aa7a81627274",
+    "label": "APPLE MUSIC",
+    "icon": "music-note",
+    "url": "https://music.apple.com/us/artist/polly-cox/6807183554"
+  },
+  {
+    "id": "21f51ad4-95db-40c4-8a43-377569934de2",
+    "label": "MAGIC STUFF",
+    "icon": "shop",
+    "url": "https://pollycox.bandcamp.com/album/magic-stuff"
+  }
+]
