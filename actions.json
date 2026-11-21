@@ -1,0 +1,6 @@
+[
+  {"label":"PLAY VIDEO","icon":"play","action":"play"},
+  {"label":"RE-SPIN","icon":"replay","action":"spin-again"},
+  {"label":"ABOUT","icon":"about","url":"https://www.bbc.co.uk/comedy/theyoungones/"},
+  {"label":"ON YOUTUBE","icon":"video","action":"youtube"}
+]

@@ -1,0 +1,37 @@
+.carousel-dock{position:absolute;left:0;width:100%;top:calc(var(--carousel-top) - (100svh - 29px));display:grid;grid-template-columns:clamp(30px,5.4vw,44px) minmax(0,1fr) clamp(30px,5.4vw,44px);align-items:center}
+.carousel-dock .carousel-arrow{min-width:0;min-height:44px;width:100%;color:#f8d995;pointer-events:auto;grid-row:1;touch-action:manipulation;filter:drop-shadow(0 1px 3px #000)}
+#cta-previous{grid-column:1}#cta-next{grid-column:3}
+.carousel-arrow::before{content:"";width:12px;height:12px;border:solid currentColor;border-width:0 3px 3px 0;transform:rotate(135deg)}
+#cta-next::before{transform:rotate(-45deg)}
+.carousel-arrow:disabled{opacity:.32}
+.left-controls{grid-area:1 / 2;display:flex;align-items:center;gap:4px;min-width:0;height:calc(var(--tile-height) + 10px);padding:5px 2px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x;scrollbar-width:none;pointer-events:auto}
+.left-controls::-webkit-scrollbar{display:none}
+.carousel-dock:not(.is-overflowing) .left-controls{justify-content:center}
+.cta-track,.cta-strip{display:flex;align-items:center;gap:4px;width:max-content;flex:none}
+.cta-track.is-looping{will-change:transform}
+.artist-custom-links{display:contents}
+/* Reuse the bundled metallic face across the carousel and lower controls. */
+.glass-controls .left-controls :is(button,a),.glass-controls :is(#replay,#share),#visits-counter{
+ background:url('cta-epicentre-tile-display.webp') center/100% 100% no-repeat;
+ filter:drop-shadow(0 2px 2px #000a);
+}
+.glass-controls .left-controls :is(button,a){
+ --cta-height:calc(var(--tile-height) + 6px);--cta-width:calc(var(--cta-height) * 20 / 21);
+ flex:0 0 var(--cta-width);min-width:0;width:var(--cta-width);height:var(--cta-height);min-height:44px;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;
+ gap:clamp(4px,calc(var(--cta-height) * .057),8px);padding:4px clamp(4px,calc(var(--cta-width) * .09),8px);
+ border:0;border-radius:calc(var(--cta-width) * .18);color:#fff5e1;
+ text-align:center;text-decoration:none;text-transform:uppercase;white-space:normal;
+ font:700 clamp(10px,calc(var(--cta-height) * .128),15px)/1.06 Arial,Helvetica,sans-serif;letter-spacing:-.15px;
+}
+.glass-controls .left-controls :is(button,a):active,.glass-controls :is(#replay,#share):active{filter:brightness(.85)}
+.left-controls #save{order:0}.left-controls .artist-link{order:1}.left-controls #buy{order:3}.left-controls #next{order:4}
+.glass-controls .glyph{color:#f1d888;width:clamp(23px,5.7vw,42px);height:clamp(23px,5.7vw,42px);flex:none}
+.glass-controls .left-controls .glyph{color:#e9c774;width:calc(var(--cta-height) * .37);height:calc(var(--cta-height) * .37)}
+.glyph img{width:100%;height:100%;display:block;object-fit:contain}
+.glass-controls .left-controls :is(button,a)>span:last-child{max-width:100%;min-height:2.12em;align-content:center;text-wrap:balance}
+.artist-link-label{overflow-wrap:anywhere}
+.artist-link-label.single-word{font-size:.91em}
+.glass-controls .left-controls .artist-link.long-label{gap:2px;padding:2px 3px}
+.glass-controls .left-controls .long-label .artist-link-label{font-size:.82em;text-wrap:wrap;letter-spacing:-.23px}
+.glass-controls :is(button,a):focus-visible,.left-controls:focus-visible{outline:2px solid #ffe3a1;outline-offset:-3px}
