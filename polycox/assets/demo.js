@@ -1,7 +1,7 @@
 import {installControlCarousel} from './atelier-carousel.js';
 import {makeArtistLinkGlyph} from './artist-link-icons.js';
 import {icon} from './action-icons.js';
-import './stationary-play.js';
+import './stationary-play.js?v=polly-brass-2';
 
 const $=s=>document.querySelector(s), machine=$('.music-machine'), strip=$('#cta-strip');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)'),abort=new AbortController();

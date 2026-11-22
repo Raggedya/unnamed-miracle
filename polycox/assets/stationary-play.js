@@ -1,12 +1,16 @@
 // A synchronous user-press bridge to the existing player control. Never queues play.
 const machine=document.querySelector('.music-machine'),frame=document.querySelector('[data-youtube-player]');
+const polly=await fetch('machine.json').then(r=>r.json()).then(c=>c.slug==='7da5ddd3-69c4-457d-ac03-75073d06f819').catch(()=>false);
 const group=document.createElement('div');group.className='stationary-play';
+if(polly){group.classList.add('polly-play');group.hidden=true;}
 group.innerHTML='<button type="button" disabled aria-describedby="stationary-play-cue">▶ Play Video</button><small id="stationary-play-cue" role="status">Spin first to select a video</small>';
 document.querySelector('.glass-controls').after(group);
 const button=group.querySelector('button'),cue=group.querySelector('small');
+if(polly)button.textContent='\u25b6\ufe0e Play Video';
 let ready=false,failed=false,loadedSource='',timer;
 function available(){return ready&&!failed&&loadedSource===frame.src&&machine.dataset.videoOpen==='true'&&['VIDEO_READY','PLAYING'].includes(machine.dataset.machineState);}
 function sync(){
+ if(polly)group.hidden=!(machine.dataset.videoOpen==='true'&&['VIDEO_READY','PLAYING','VIDEO_UNAVAILABLE'].includes(machine.dataset.machineState));
  button.disabled=!available();
  cue.textContent=available()?'':failed?'Video unavailable — spin again':!machine.dataset.revealedVideoId?'Spin first to select a video':['LEVER_PULL','SPINNING','READY_TO_PLAY'].includes(machine.dataset.machineState)?'Wait for the reel to settle':'Waiting for the video to be ready';
 }
