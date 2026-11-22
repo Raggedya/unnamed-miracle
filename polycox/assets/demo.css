@@ -39,6 +39,8 @@ html,body,.music-machine{background-color:#0d0e0f;background-image:url('black-da
 .stationary-play button:focus-visible{outline:2px solid #ffe3a1;outline-offset:3px}
 .stationary-play small{color:#ddc89e;font:12px/1.3 Arial,Helvetica,sans-serif;min-height:16px}
 .stationary-play[hidden]{display:none!important}
-.stationary-play.polly-play button{appearance:none;-webkit-appearance:none;border-color:#72502e;background:#b18a55 linear-gradient(180deg,#d3b17a 0%,#b99059 12%,#a67a45 48%,#b68b52 77%,#886039 100%);box-shadow:inset 0 1px 0 #ead0a0,inset 1px 0 1px #d0ac73,inset -1px 0 1px #785331,inset 0 -3px 2px #654327;color:#281c12;-webkit-text-fill-color:currentColor;text-shadow:0 1px 0 #d7b580}
+.stationary-play.polly-play button{appearance:none;-webkit-appearance:none;position:relative;isolation:isolate;width:140px;height:44px;min-height:44px;padding:0;border:0;border-radius:4px;background:transparent;box-shadow:none;color:#261b10;-webkit-text-fill-color:currentColor;text-shadow:0 1px 0 #dfbc80;font-size:12px;line-height:30px}
+.stationary-play.polly-play button::before{content:"";position:absolute;z-index:-1;left:0;top:7px;width:140px;height:30px;box-sizing:border-box;border:1px solid #71502c;border-radius:4px;background:repeating-linear-gradient(0deg,#ffffff08 0px,#ffffff08 .5px,#00000008 .5px,#00000008 1px),linear-gradient(100deg,#ffffff00 6%,#fff0cc22 22%,#ffffff00 38%,#ffffff00 72%,#ffe2a81a 86%,#ffffff00 96%),linear-gradient(180deg,#b28a52 0%,#eed09b 7%,#c8a06a 13%,#b58a51 33%,#bd935c 65%,#9f733e 88%,#674523 100%);box-shadow:inset 0 1px 0 #f0d2a0,inset 0 -1px 0 #684622,0 1px 2px #0008}
 .stationary-play.polly-play button:disabled{opacity:.65;filter:saturate(.65)}
-.stationary-play.polly-play button:enabled:active{background:#a47a47 linear-gradient(180deg,#a87d49,#c09a61 70%,#9a703f);box-shadow:inset 0 2px 3px #5c3e26,inset 0 -1px 0 #d3b17a}
+.stationary-play.polly-play button:enabled:active{background:transparent;box-shadow:none}
+.stationary-play.polly-play button:enabled:active::before{filter:brightness(.92);box-shadow:inset 0 1px 2px #57391f,inset 0 -1px 0 #d7b582}
